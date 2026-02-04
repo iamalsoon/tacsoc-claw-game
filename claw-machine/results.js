@@ -11,23 +11,27 @@ var result = sessionStorage.getItem("result")
 function loadPage() {
     window_el.style.opacity = "1"
     window_el.style.transform = "translateY(0px)"
-    download_el.style.opacity = "0"
+    download_el.style.opacity = "1"
     playAgain_el.style.opacity = "1"
     result_img_el.src = `Assets/preview_imgs/preview${result}.png`
+    displayResult();
 }
 
 // this actually calls that loading function
 loadPage();
 
-// this tells the website to find the winning prize imagine and prompt the user to download if they hit the download button
-download_el.addEventListener("click", () => {
-    const link = document.createElement('a')
-    link.href = `Assets/prize_imgs/prize${result}.jpeg` // this is where you can change the file type of the prize to something besides .jpeg
-    link.download = `claw-machine-prize.jpeg`
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-})
+// displays the result of the prize
+function displayResult() {
+    const resultDisplay = document.getElementById('download');
+
+    if (result == 1 || result == 2 || result == 3 || result == 4) {
+        resultDisplay.textContent = 'LOLLIES';
+    } else if (result == 5 || result == 6 || result == 7) {
+        resultDisplay.textContent = 'BADGE';
+    } else if (result == 0) {
+        resultDisplay.textContent = 'HOODIE';
+    }
+}
 
 // this tells the website to go back to the game page if the user hits the play again button
 playAgain_el.addEventListener("click", ()=> {

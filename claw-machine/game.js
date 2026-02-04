@@ -7,6 +7,7 @@ var left_arrow_el = document.querySelector("#left-arrow")
 var window_el = document.querySelector("#window")
 var controls_el = document.querySelector("#controls")
 var drop_el = document.querySelector("#drop")
+var download_el = document.querySelector("#download")
 
 // DO NOT CHANGE THESE VARIABLES
 // They set up the limits of the claw machine movement 
@@ -71,7 +72,8 @@ document.addEventListener("keydown", (e) => {
 
 // this tells the claw to drop when someone clicks the drop button of the page
 drop_el.addEventListener("click", () => {
-    setTimeout(dropClaw, 500)}
+    setTimeout(dropClaw, 500);
+  }
 )
 
 // this is telling the page how to animate the act of the claw dropping and then triggering the animation to pull up the prize

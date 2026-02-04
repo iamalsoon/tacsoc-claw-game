@@ -16,9 +16,9 @@ var xTransf = 0;
 
 // OPTIONAL VARIABLES TO CHANGE
 // You can set up the odds for specific prizes here, you just need to make sure that all the odds together sum to exactly 1
-const RARE_ODDS =.003
-const COMMON_ODDS = .2
-const LOSING_ODDS = 0.5 - (RARE_ODDS + (COMMON_ODDS*7)) // we multiply by 7 because there are 7 prizes with common odds
+const RARE_ODDS =.005
+const COMMON_ODDS = .9
+const LOSING_ODDS = 1 - (RARE_ODDS + (COMMON_ODDS*7)) // we multiply by 7 because there are 7 prizes with common odds
 var winningOdds = {0:RARE_ODDS,1:COMMON_ODDS,2:COMMON_ODDS,3:COMMON_ODDS,4:COMMON_ODDS,5:COMMON_ODDS,6:COMMON_ODDS,7:COMMON_ODDS,8:.295}
 
 // this tells the claw how to move when someone presses the right arrow button on the page

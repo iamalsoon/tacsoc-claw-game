@@ -25,7 +25,7 @@ function displayResult() {
     const resultDisplay = document.getElementById('download');
 
     if (result == 1 || result == 2 || result == 3 || result == 4) {
-        resultDisplay.textContent = 'LOLLIES';
+        resultDisplay.textContent = 'MYSTEA-RY GIFT';
     } else if (result == 5 || result == 6 || result == 7) {
         resultDisplay.textContent = 'BADGE';
     } else if (result == 0) {
